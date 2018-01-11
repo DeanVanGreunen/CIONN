@@ -1,0 +1,33 @@
+**CIO NN**
+
+CIO NN stands for Controller Input Output Nerual Network
+
+note due to a typo the "nearon" means "neron"
+
+For this we have to redefine the Nearon two
+	- 2 Inputs
+	- 2 Outputs
+	- 4 Weights (each input and output have their own weights)
+	- Internal Memory Cell (any byte or bit or block size with variable size)
+	- Activation Function (Defines what weights and what inputs activate this Nearon)
+	- Memory Storage Function (Defines what and when this cell should store said memory or memory stream)
+	- Memory Transpose Function (Once activated any stored memory that the activation function can trigger will be played/pushed into the Nerual Network)
+	- Forget Function (Defines when and/or how and/or why these memories can be destroyed/removed based on Activation function with Memory states and any input stateses itself)
+
+This would look something like these:
+
+
+These would be arranges like this:
+
+Which we can build it into this:
+
+it can be trained like this:
+	do normal NN training from the inputs to the input outputs like a hidden layer NN
+
+then trained to be controlled like this:
+	then set the known NN dataset (inputs) to be corrected to actual or correct values via the CI (Controller Input) which will be outputed on the "Input + Controller Input" Output
+	
+by training like this:
+	1. you have a normal NN with hidden layers which can be trainned (this can be done with CNNs) with backpropergation, and a cost function (use least amount of nerons) etc
+	2. now you can allow the CIO NN to retrain / teach itself with supervised or unsupervised learning.
+	3. you can combine the "Input Output" and the "Input + Controller Input" Output with another NN which can then connect with this NN in a similiar way that a Neron connects to a Neron
